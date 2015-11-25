@@ -13,10 +13,12 @@ def InsertarTexto(Texto, NombreArchivo):
 def LeerTexto(NombreArchivo):
     archi=open(NombreArchivo,'r')
     linea=archi.readline()
+    print ('Inicia la lectura linea a linea')
     while linea!="":
-        print linea
+        print (linea)
         linea=archi.readline()
-     archi.close()
+    print ('Termino Lectura - Cerrar puntero a Archivo.')
+    archi.close()
 
 CrearArchivo('miarchivo.txt')
 InsertarTexto('Mi primera linea\n', 'miarchivo.txt')
